@@ -1,5 +1,7 @@
 package study.java8to11;
 
+import java.util.function.*;
+
 public class Java8to11Application {
 
 	public static void main(String[] args) {
@@ -36,6 +38,44 @@ public class Java8to11Application {
 		int baseNumber = 10;
 		FunctionalInterface2 functionalInterface2_2 = (number) -> number+baseNumber;
 
+		//==========================
+		//1) Function<T, R>
+		Function1 function1 = new Function1();
+		System.out.println(function1.apply(10));
+
+		//클래스 없이 람다식으로 바로 구현 가능
+		Function<Integer, Integer> plus5 = (number) -> number + 5;
+		System.out.println(plus5.apply(10));
+		
+		Function<Integer, Integer> multiple2 = (number) -> number * 2;
+		
+		//1-2) UnaryOperator<T>
+		UnaryOperator<Integer> plus20 = (number) -> number + 20;
+
+		//두 함수를 조합 가능
+		Function<Integer, Integer> multiple2AndPlus10 = plus5.compose(multiple2);
+		System.out.println(multiple2AndPlus10.apply(10));
+
+		System.out.println(plus5.andThen(multiple2).apply(10));
+
+		//2) Consumer<T>
+		Consumer<String> hello = (s) -> System.out.println(s);
+		hello.accept("Hello~");
+
+		//3) Supplier<T>
+		Supplier<Integer> get10 = () -> 10;
+		System.out.println("get10 = " + get10.get());
+
+		//4) Predicate<T>
+		Predicate<String> startsWithApple = (s) -> s.startsWith("apple");
+		Predicate<Integer> isEven = (i) -> i%2==0;
+
+		//5) BinaryOperator
+		BinaryOperator<Integer> sum = (a,b) -> a+b;
+		int result = sum.apply(10, 10);
+		System.out.println("result = " + result);
+
 	}
+
 
 }
