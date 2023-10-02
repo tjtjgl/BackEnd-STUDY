@@ -1,5 +1,9 @@
 package study.java8to11;
 
+import study.java8to11.functionalInterface.Function1;
+import study.java8to11.functionalInterface.FunctionalInterface1;
+import study.java8to11.functionalInterface.FunctionalInterface2;
+
 import java.util.function.*;
 
 public class Java8to11Application {

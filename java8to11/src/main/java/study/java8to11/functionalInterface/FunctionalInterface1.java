@@ -1,4 +1,4 @@
-package study.java8to11;
+package study.java8to11.functionalInterface;
 
 @java.lang.FunctionalInterface
 public interface FunctionalInterface1 {
