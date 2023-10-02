@@ -3,10 +3,10 @@ package study.java8to11;
 import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 
-public class LambdaExpressionMain {
+public class LambdaExpressionApp {
 
     public static void main(String[] args) {
-        new LambdaExpressionMain().run();
+        new LambdaExpressionApp().run();
     }
 
     public void run() {
