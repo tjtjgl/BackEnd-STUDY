@@ -3,6 +3,7 @@ package study.java8to11;
 import study.java8to11.methodEx.Greeting;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
@@ -39,13 +40,13 @@ public class MethodReferenceApp {
         //4) 임의의 객체의 인스턴스 메소드 침조
         String[] names = {"seohee", "java", "spring"};
 
-        /*  comparator로 정렬, java8부터 Functional Interface로 동작 -> 람다로 변경
+        //  comparator로 정렬, java8부터 Functional Interface로 동작 -> 람다로 변경
         Arrays.sort(names, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return 0;
             }
-        });*/
+        });
         
         /* 메소드레퍼런스로 변경
         Arrays.sort(names, ((o1, o2) -> 0));

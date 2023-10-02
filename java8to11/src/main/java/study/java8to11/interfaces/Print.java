@@ -17,6 +17,10 @@ public interface Print {
         System.out.println(getName().toUpperCase());
     }
 
+    static void printAnithing(){
+        System.out.println("static method test");
+    };
+
     String getName();
 
 
